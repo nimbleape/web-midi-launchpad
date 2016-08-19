@@ -1,0 +1,31 @@
+{
+  "name": "launch-pad",
+  "version": "1.0.0",
+  "description": "Client lib to communicate with novation launchpad",
+  "main": "bundle.js",
+  "browser": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "budo demo.js",
+    "prepublish": "babel index.js -o bundle.js"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "keywords": [
+    "novation",
+    "lauchpad"
+  ],
+  "author": "Dan Jenkins <dan@nimblea.pe>",
+  "license": "MIT",
+  "dependencies": {
+    "babelify": "^6.1.2",
+    "generic-midi-controller": "^1.0.3"
+  },
+  "devDependencies": {
+    "babel": "^5.8.38",
+    "budo": "^4.0.0"
+  }
+}
