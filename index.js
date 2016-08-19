@@ -4,9 +4,6 @@ export default function LaunchPad (opts = {}) {
   const controller = GenericMIDIController(inputs(), outputs())
   controller.reset = reset
   controller.lightAll = lightAll
-  controller.displayCharacter = displayCharacter
-  controller.displayString = displayString
-  controller.scrollString = scrollString
 
   return controller
 
