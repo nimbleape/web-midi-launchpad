@@ -4,15 +4,20 @@ export default function LaunchPad (opts = {}) {
   const controller = GenericMIDIController(inputs(), outputs())
   controller.reset = reset
   controller.lightAll = lightAll
+  controller.clearLights = clearLights
 
   return controller
 
   function reset () {
-    controller.send([240, 0, 32, 41, 2, 24, 14, 0, 247])
+    controller.send([176, 0, 0]);
   }
 
   function lightAll (colour) {
     controller.send([240, 0, 32, 41, 2, 24, 14, colour, 247])
+  }
+
+  function clearLights () {
+    controller.send([240, 0, 32, 41, 2, 24, 14, 0, 247])
   }
 
   function inputs () {
